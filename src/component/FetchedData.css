@@ -1,0 +1,45 @@
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: auto;
+  height: 100%;
+  position: relative;
+  padding: 30px 30px;
+  padding-bottom: 30px;
+  height: 120px;
+  background-color: rgb(255, 201, 182);
+  border-radius: 10px;
+}
+.btn {
+  background-color: rgb(234, 81, 81);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.spinner {
+    position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #474bff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner.active{
+    opacity: 1;
+}
